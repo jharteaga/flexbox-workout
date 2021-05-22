@@ -17,6 +17,7 @@ a {
 	text-decoration: none;
 	color: black;
 	text-align: center;
+	font-weight: bold;
 }
 
 /* ============== Header Styling =============== */
@@ -31,6 +32,7 @@ header {
 header h1 {
 	border: 1px solid black;
 	padding: 0.2em 0.2em 0.1em;
+	font-weight: bold;
 }
 
 nav ul {
@@ -39,7 +41,7 @@ nav ul {
 	flex-wrap: wrap;
 	gap: 1px;
 	justify-content: space-between;
-	align-content: flex-start;
+	/* align-content: flex-start; */
 }
 
 nav ul li {
@@ -82,4 +84,87 @@ img {
 /* ============== Footer Styling =============== */
 footer {
 	margin: 0.5em 0.1em;
+}
+
+/* ============== Media Query Small Design (600px) =============== */
+@media screen and (min-width: 600px) {
+	nav ul li:last-child {
+		flex-basis: 0;
+	}
+}
+
+/* ============== Media Query Medium Design (900px) =============== */
+@media screen and (min-width: 900px) {
+	/* Header Styling */
+	header {
+		flex-direction: row;
+	}
+
+	header h1 {
+		flex-grow: 0.5;
+		padding: 0;
+		padding-left: 0.2em;
+	}
+
+	header nav {
+		display: flex;
+		flex-grow: 0.5;
+	}
+
+	header nav ul {
+		flex-grow: 1;
+	}
+
+	nav ul li {
+		align-items: center;
+		padding: auto 1em;
+	}
+
+	/* Main Styling */
+	main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	main article {
+		flex-basis: 50%;
+	}
+}
+
+/* ============== Media Query Large Design (1200px) =============== */
+@media screen and (min-width: 1200px) {
+	main article {
+		flex-basis: 33%;
+	}
+}
+
+/* ============== Media Query Extra-Large Design (1700px) =============== */
+@media screen and (min-width: 1700px) {
+	main article {
+		flex-basis: 25%;
+		border: 1px solid black;
+		position: relative;
+	}
+
+	article h2 {
+		position: absolute;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.8);
+		margin-top: 0.4em;
+		padding-left: 0.1em;
+	}
+
+	article p {
+		margin: 0;
+		padding: 0 0 0.1em 0.5em;
+	}
+
+	article,
+	article:last-child {
+		margin-bottom: 0em;
+	}
+
+	footer {
+		margin-top: 3em;
+	}
 }
