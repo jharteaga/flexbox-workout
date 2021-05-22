@@ -88,7 +88,7 @@ footer {
 /* ============== Media Query Small Design (600px) =============== */
 @media screen and (min-width: 600px) {
 	nav ul li:last-child {
-		flex-basis: 0;
+		flex-basis: auto;
 	}
 }
 
